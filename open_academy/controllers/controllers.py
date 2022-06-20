@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
-# from odoo import http
+from odoo import http
 
 
 # class OpenAcademy(http.Controller):
-#     @http.route('/open_academy/open_academy', auth='public')
+#     @http.route('/', auth='public')
 #     def index(self, **kw):
+#         print('hello')
 #         return "Hello, world"
 
 #     @http.route('/open_academy/open_academy/objects', auth='public')
