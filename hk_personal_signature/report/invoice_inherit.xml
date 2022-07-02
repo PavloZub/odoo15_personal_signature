@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="hk_invoice_rahf_inherit" inherit_id="kw_invoice_rahf.kw_invoice_rahf_template">
+<!--            <xpath expr="//t[@t-call='kw_invoice_rahf.kw_invoice_rahf_template']" position="replace">-->
+<!--            <xpath expr="//t[@t-call='web.basic_layout']" position="after">-->
+<!--            <xpath expr="//table[5]//tr//td" position="before">-->
+<!--                <t t-if="doc.user_id">-->
+<!--                    <td align="right">-->
+<!--                        <img style="max-height:5cm; max-width:5cm;"-->
+<!--                             t-att-src="'data:image/png;base64,%s' % to_text(doc.user_id.stamp_image)"/>-->
+<!--                        <img style="max-height:1cm; max-width:4cm;"-->
+<!--                             t-att-src="'data:image/png;base64,%s' % to_text(doc.user_id.sign_image)"/>-->
+<!--                    </td>-->
+
+<!--                </t>-->
+            <xpath expr="//table[5]//tr//td" position="replace">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="100%" align="right">
+                        <div style="position: relative; left: 0; top: 0;">
+
+
+
+                            <t t-if="doc.user_id">
+                                <div style="position: relative; left: 0px; top: 0px;">
+                                    <img style="max-height:1cm; max-width:4cm; position: absolute; left: 700px; top: -10px;"
+                                         t-att-src="'data:image/png;base64,%s' % to_text(doc.user_id.sign_image)"/>
+                                    <img style="max-height:5cm; max-width:5cm; position: absolute; left: 550px; top: 0px;"
+                                         t-att-src="'data:image/png;base64,%s' % to_text(doc.user_id.stamp_image)"/>
+                                </div>
+                            </t>
+
+                        <span style="white-space:nowrap;">
+                            Виписав: ________________________
+                        </span>
+                        <t t-if="doc.user_id">
+                            <span t-field="doc.user_id"/>
+                        </t>
+
+                        <t t-else="">
+                            <span style="white-space:nowrap;">
+                                _______________________________________________
+                            </span>
+                        </t>
+                        <br/>
+                        <br/>
+                        <t t-if="doc.invoice_payment_term_id">
+                            <span style="white-space:nowrap;">Рахунок дійсний
+                                протягом
+                                <span t-field="doc.invoice_payment_term_id"/>
+                            </span>
+                        </t>
+                        <t t-else="">
+                            <t t-if="doc.invoice_date_due">
+                                <span style="white-space:nowrap;">Рахунок
+                                    дійсний до
+                                    <span t-field="doc.invoice_date_due"/>
+                                </span>
+                            </t>
+                        </t>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            </xpath>
+        </template>
+
+        <template id="hk_invoice_vydn" inherit_id="kw_invoice_vydn.kw_invoice_vydn_template">
+            <xpath expr="//table[6]" position="replace">
+                 <table width="100%">
+                    <tr>
+                        <td width="50%">
+                            <br/>
+
+                           <t t-if="doc.user_id">
+                                <div style="position: relative; left: 0px; top: 0px;">
+                                    <img style="max-height:1cm; max-width:4cm; position: absolute; left: 100px; top: 70px;"
+                                         t-att-src="'data:image/png;base64,%s' % to_text(doc.user_id.sign_image)"/>
+                                    <img style="max-height:5cm; max-width:5cm; position: absolute; left: 150px; top: 0px;"
+                                         t-att-src="'data:image/png;base64,%s' % to_text(doc.user_id.stamp_image)"/>
+                                </div>
+                            </t>
+
+                            <h5>
+                                <b>Від постачальника*</b>
+                            </h5>
+                            <br/>
+                            _________________________________________
+                            <br/>
+                            <br/>
+                            <sub>* Відповідальний за здійснення господарської
+                                операції
+                            </sub>
+                            <br/>
+                            та правильність її оформлення
+                        </td>
+                        <td width="50%">
+                            <br/>
+                            <h5>
+                                <b>Отримав(ла)</b>
+                            </h5>
+                            <br/>
+                            _________________________________________
+                            <br/>
+                            <br/>
+                            За довіреністю ___ № ____ від
+                        </td>
+                    </tr>
+                </table>
+
+            </xpath>
+
+        </template>
+    </data>
+</odoo>
