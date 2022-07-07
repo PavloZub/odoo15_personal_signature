@@ -9,7 +9,8 @@
 
     'depends': ['base',],
     'data': [
-        'report/invoice_inherit.xml'
+        'report/invoice_inherit.xml',
+        'views/company.xml',
     ],
     'installable': True,
     'demo': [
