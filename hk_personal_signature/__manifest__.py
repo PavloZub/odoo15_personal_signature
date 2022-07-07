@@ -2,9 +2,9 @@
     'name': 'Personal signature and seal on pdf reports - documents',
     'version': '1.0',
 
-    'author': 'Hot Key',
-    'website': 'https://hotkey.com/',
-    'license': 'OPL-1',
+    'author': 'HOTKEY COMPANY',
+    'website': 'https://hotkey.ua',
+    'license': 'AGPL-3',
     'category': 'Localization',
 
     'depends': ['base',],
