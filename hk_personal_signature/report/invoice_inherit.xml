@@ -38,7 +38,7 @@
 
         </template>
 
-        <template id="hk_invoice_vydn" inherit_id="kw_so_vydn.kw_so_vydn_template">
+        <template id="hk_so_vydn" inherit_id="kw_so_vydn.kw_so_vydn_template">
             <xpath expr="//table[6]//tr//td//h5" position="after">
                 <t t-if="doc.user_id">
                     <span>
@@ -46,7 +46,7 @@
                              t-att-src="'data:image/png;base64,%s' % to_text(doc.user_id.sign_image)"/>
                         <t t-if="doc.company_id.partner_id">
                             <span>
-                                <img style="max-height:5cm; max-width:5cm; position: relative; left: 0px; top: -100px;"
+                                <img style="max-height:5cm; max-width:5cm; position: relative; left: 0px; top: 100px;"
                                      t-att-src="'data:image/png;base64,%s' % to_text(doc.company_id.stamp_image)"/>
                             </span>
                         </t>
