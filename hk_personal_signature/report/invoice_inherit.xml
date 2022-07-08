@@ -1,57 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <!--        <template id="hk_invoice_rahf_inherit" inherit_id="kw_invoice_rahf.kw_invoice_rahf_template">-->
-        <!--            <xpath expr="//table[5]" position="replace">-->
-        <!--                <table width="100%" cellpadding="0" cellspacing="0">-->
-        <!--                    <tr>-->
-        <!--                        <td width="100%" align="right">-->
-        <!--                            <div style="position: relative; left: 0; top: 0;">-->
-
-        <!--                                <t t-if="doc.user_id">-->
-        <!--                                    <div style="position: relative; left: 0px; top: 0px;">-->
-        <!--                                        <img style="max-height:1cm; max-width:4cm; position: absolute; left: 700px; top: -10px;"-->
-        <!--                                             t-att-src="'data:image/png;base64,%s' % to_text(doc.user_id.sign_image)"/>-->
-        <!--                                        <img style="max-height:5cm; max-width:5cm; position: absolute; left: 550px; top: 0px;"-->
-        <!--                                             t-att-src="'data:image/png;base64,%s' % to_text(doc.user_id.stamp_image)"/>-->
-        <!--                                    </div>-->
-        <!--                                </t>-->
-
-        <!--                                <span style="white-space:nowrap;">-->
-        <!--                                    Виписав: ________________________-->
-        <!--                                </span>-->
-        <!--                                <t t-if="doc.user_id">-->
-        <!--                                    <span t-field="doc.user_id"/>-->
-        <!--                                </t>-->
-
-        <!--                                <t t-else="">-->
-        <!--                                    <span style="white-space:nowrap;">-->
-        <!--                                        _______________________________________________-->
-        <!--                                    </span>-->
-        <!--                                </t>-->
-        <!--                                <br/>-->
-        <!--                                <br/>-->
-        <!--                                <t t-if="doc.invoice_payment_term_id">-->
-        <!--                                    <span style="white-space:nowrap;">Рахунок дійсний-->
-        <!--                                        протягом-->
-        <!--                                        <span t-field="doc.invoice_payment_term_id"/>-->
-        <!--                                    </span>-->
-        <!--                                </t>-->
-        <!--                                <t t-else="">-->
-        <!--                                    <t t-if="doc.invoice_date_due">-->
-        <!--                                        <span style="white-space:nowrap;">Рахунок-->
-        <!--                                            дійсний до-->
-        <!--                                            <span t-field="doc.invoice_date_due"/>-->
-        <!--                                        </span>-->
-        <!--                                    </t>-->
-        <!--                                </t>-->
-        <!--                            </div>-->
-        <!--                        </td>-->
-        <!--                    </tr>-->
-        <!--                </table>-->
-        <!--            </xpath>-->
-        <!--        </template>-->
-
         <template id="hk_invoice_rahf_inherit" inherit_id="kw_invoice_rahf.kw_invoice_rahf_template">
             <xpath expr="//table[5]//tr//td" position="inside">
                 <t t-if="doc.user_id">
@@ -84,61 +33,16 @@
         <template id="hk_sale_fakt" inherit_id="kw_so_rahf.kw_so_rahf_template">
             <xpath expr="//table[5]//tr//td" position="inside">
                 <t t-if="doc.user_id">
-                    <!--                            <div style="position: relative; left: 0px; top: 0px;">-->
                     <span>
-                        <!--                        <img style="max-height:1cm; max-width:4cm; position: absolute; left: 700px; top: -10px;"-->
-                        <!--                             t-att-src="'data:image/png;base64,%s' % to_text(doc.user_id.sign_image)"/>-->
                         <img style="max-height:1cm; max-width:4cm; position: relative; left: 0px; top: -150px;"
                              t-att-src="'data:image/png;base64,%s' % to_text(doc.user_id.sign_image)"/>
                         <img style="max-height:5cm; max-width:5cm; position: relative; left: 0px; top: -100px;"
                              t-att-src="'data:image/png;base64,%s' % to_text(doc.user_id.stamp_image)"/>
 
                     </span>
-                    <!--                            </div>-->
                 </t>
             </xpath>
         </template>
 
-        <!--        <template id="hk_sale_fakt" inherit_id="kw_so_rahf.kw_so_rahf_template">-->
-        <!--            <xpath expr="//table[5]" position="replace">-->
-        <!--                <table width="100%" cellpadding="0" cellspacing="0">-->
-        <!--                    <tr>-->
-        <!--                        <td width="100%" align="right">-->
-        <!--                            <t t-if="doc.user_id">-->
-        <!--                                <div style="position: relative; left: 0px; top: 0px;">-->
-        <!--                                    <img style="max-height:1cm; max-width:4cm; position: absolute; left: 700px; top: -10px;"-->
-        <!--                                         t-att-src="'data:image/png;base64,%s' % to_text(doc.user_id.sign_image)"/>-->
-        <!--                                    <img style="max-height:5cm; max-width:5cm; position: absolute; left: 550px; top: 0px;"-->
-        <!--                                         t-att-src="'data:image/png;base64,%s' % to_text(doc.user_id.stamp_image)"/>-->
-        <!--                                </div>-->
-        <!--                            </t>-->
-        <!--                            Виписав:-->
-        <!--                            <span style="white-space:nowrap;">-->
-        <!--                                ________________________-->
-        <!--                            </span>-->
-        <!--                            <t t-if="doc.user_id">-->
-        <!--                                <span t-field="doc.user_id"/>-->
-        <!--                            </t>-->
-        <!--                            <t t-else="">-->
-        <!--                                <span style="white-space:nowrap;">-->
-        <!--                                    _______________________________________________-->
-        <!--                                </span>-->
-        <!--                            </t>-->
-        <!--                            <br/>-->
-        <!--                            <br/>-->
-        <!--                            <t t-if="doc.payment_term_id">-->
-        <!--                                <span style="white-space:nowrap;">Рахунок дійсний-->
-        <!--                                    протягом-->
-        <!--                                    <span t-field="doc.payment_term_id"/>-->
-        <!--                                </span>-->
-        <!--                            </t>-->
-        <!--                        </td>-->
-        <!--                    </tr>-->
-        <!--                </table>-->
-
-
-        <!--            </xpath>-->
-
-        <!--        </template>-->
     </data>
 </odoo>
