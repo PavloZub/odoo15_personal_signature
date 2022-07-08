@@ -5,8 +5,8 @@ class Company(models.Model):
     _inherit = 'res.company'
 
     # Add a new column to the res.company model, by default partners are not
-    # sign and stamp image
-    sign_image = fields.Binary(string="Personal signature")
+    # sign  image
+
     stamp_image = fields.Binary(string="Stamp of company")
 
 class Users(models.Model):
@@ -15,5 +15,5 @@ class Users(models.Model):
     # Add a new column to the res.company model, by default partners are not
     # sign and stamp image
     sign_image = fields.Binary(string="Personal signature")
-    stamp_image = fields.Binary(string="Stamp of company")
+
 
