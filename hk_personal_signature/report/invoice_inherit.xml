@@ -21,7 +21,7 @@
 
 
         <template id="hk_invoice_vydn" inherit_id="kw_invoice_vydn.kw_invoice_vydn_template">
-            <xpath expr="//table[6]//tr//td" position="inside">
+            <xpath expr="//table[6]//tr//td//h5" position="after">
                 <t t-if="doc.user_id">
                     <div style="position: relative; left: 0px; top: 0px;">
                         <img style="max-height:1cm; max-width:4cm; absolute: absolute; left: 0px; top: -10px;"
