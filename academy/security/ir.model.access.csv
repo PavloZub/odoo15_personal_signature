@@ -1,4 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_academy_teachers,access_academy_teachers,model_academy_teachers,base.group_user,1,1,1,1
-access_checkout_portal,Checkout Portal Access,library_checkout.model_library_checkout,,1,1,1,1
-access_academy_courses,access_academy_courses,academy.model_product_template,,1,1,1,1
