@@ -24,13 +24,11 @@
             <xpath expr="//table[6]//tr//td//h5" position="after">
                 <t t-if="doc.user_id">
                     <div style="position: relative; left: 0px; top: 0px;">
-                        <img style="max-height:1cm; max-width:4cm; absolute: absolute; left: 0px; top: -10px;"
+                        <img style="max-height:1cm; max-width:4cm; position: absolute; left: 0px; top: 20px; margin:0px; padding:0px;"
                              t-att-src="'data:image/png;base64,%s' % to_text(doc.user_id.sign_image)"/>
                         <t t-if="doc.company_id.partner_id">
-                            <span>
-                                <img style="max-height:5cm; max-width:5cm; position: absolute; left: 0px; top: -10px;"
-                                     t-att-src="'data:image/png;base64,%s' % to_text(doc.company_id.stamp_image)"/>
-                            </span>
+                            <img style="max-height:5cm; max-width:5cm; position: absolute; left: 20px; top: -10px;"
+                                 t-att-src="'data:image/png;base64,%s' % to_text(doc.company_id.stamp_image)"/>
                         </t>
                     </div>
                 </t>
@@ -42,7 +40,7 @@
             <xpath expr="//table[6]//tr//td//h5" position="after">
                 <t t-if="doc.user_id">
                     <div style="position: relative; left: 0px; top: 0px;">
-                        <img style="max-height:1cm; max-width:4cm; position: absolute; left: 0px; top: -10px;"
+                        <img style="max-height:1cm; max-width:4cm; position: absolute; left: 10px; top: 20px;"
                              t-att-src="'data:image/png;base64,%s' % to_text(doc.user_id.sign_image)"/>
                         <t t-if="doc.company_id.partner_id">
                             <span>
