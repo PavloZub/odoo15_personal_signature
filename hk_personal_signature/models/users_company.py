@@ -7,14 +7,14 @@ class Company(models.Model):
     # Add a new column to the res.company model,
     # stamp  image
 
-    stamp_image = fields.Binary(string="Stamp of company")
+    stamp_image = fields.Image(string="Stamp of company")
 
 class Users(models.Model):
     _inherit = 'res.users'
 
     # Add a new column to the res.users model,
     # sign image
-    sign_image = fields.Binary(string="Personal signature")
+    sign_image = fields.Image(string="Personal signature")
 
 
 

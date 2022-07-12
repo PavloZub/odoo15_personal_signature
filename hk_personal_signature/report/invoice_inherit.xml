@@ -30,7 +30,6 @@
                 </span>
             </t>
         </xpath>
-
     </template>
 
     <template id="hk_so_vydn" inherit_id="kw_so_vydn.kw_so_vydn_template">
