@@ -7,7 +7,9 @@
     'license': 'OPL-1',
     'category': 'Localization',
 
-    'depends': ['kw_invoice_rahf', 'kw_invoice_vydn','kw_so_vydn','kw_so_rahf'],
+    'depends': [
+        'kw_invoice_rahf', 'kw_invoice_vydn', 'kw_so_vydn', 'kw_so_rahf'
+    ],
     'data': [
         'report/invoice_inherit.xml',
         'views/users_company.xml',
