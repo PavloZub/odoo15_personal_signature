@@ -36,10 +36,8 @@
         <xpath expr="//table[6]//tr//td//h5" position="after">
             <t t-if="doc.user_id.sign_image and doc.company_id.stamp_image">
                 <span style="position: relative; left: 0px; top: 0px;">
-                    <img style="max-height:1cm; max-width:4cm; position: absolute; left: 10px; top: 20px;"
+                    <img style="max-height:1cm; max-width:4cm; position: absolute; left: 10px; top: 0px;"
                          t-att-src="'data:image/png;base64,%s' % to_text(doc.user_id.sign_image)"/>
-                </span>
-                <span>
                     <img style="max-height:5cm; max-width:5cm; position: absolute; left: 0px; top: -10px;"
                          t-att-src="'data:image/png;base64,%s' % to_text(doc.company_id.stamp_image)"/>
                 </span>

@@ -1,4 +1,4 @@
-## Personal signature and seal 
+## Personal signature and stamp 
 ## for documents:
 - kw_invoice_rahf
 - kw_invoice_vydn

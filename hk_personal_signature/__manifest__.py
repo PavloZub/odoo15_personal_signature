@@ -1,5 +1,5 @@
 {
-    'name': 'Personal signature and seal on documents',
+    'name': 'Personal signature and stamp on documents',
     'version': '15.0.1.0.0',
 
     'author': 'HOTKEY COMPANY',
