@@ -1,13 +1,15 @@
 {
-    'name': 'Personal signature and seal on pdf reports - documents',
-    'version': '1.0',
+    'name': 'Personal signature and stamp on documents',
+    'version': '15.0.1.0.0',
 
     'author': 'HOTKEY COMPANY',
     'website': 'https://hotkey.ua',
-    'license': 'AGPL-3',
+    'license': 'OPL-1',
     'category': 'Localization',
 
-    'depends': ['base',],
+    'depends': [
+        'kw_invoice_rahf', 'kw_invoice_vydn', 'kw_so_vydn', 'kw_so_rahf'
+    ],
     'data': [
         'report/invoice_inherit.xml',
         'views/users_company.xml',
