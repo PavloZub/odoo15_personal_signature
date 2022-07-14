@@ -1,0 +1,57 @@
+<odoo>
+    <data>
+        <template id="index">
+            <!--            <title>Academy</title> simple start template-->
+            <!--            <t t-foreach="teachers" t-as="teacher">-->
+            <!--                <p>-->
+            <!--                    <t t-out="teacher.id"></t> <t t-out="teacher.name"></t> <t t-out="teacher.value"></t>-->
+            <!--                </p>-->
+            <!--            </t>-->
+            <t t-call="website.layout">
+                <t t-set="title">Academy</t>
+                <div class="oe_structure">
+                    <div class="container">
+                        <t t-foreach="teachers" t-as="teacher">
+                            <p>
+                                <a t-attf-href="/academy/{{slug(teacher)}}">
+                                    <span t-field="teacher.id"/>
+                                    <span t-field="teacher.name"/>
+                                    <span t-field="teacher.value"/>
+                                </a>
+                            </p>
+                        </t>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <template id="biography">
+            <t t-call="website.layout">
+                <t t-set="title">Academy</t>
+                <div class="oe_structure"/>
+                <div class="oe_structure">
+                    <div class="container">
+                        <h3 t-field="person.name"/>
+                        <div contentEditable="True" t-field="person.value"/>
+                        <p>
+                            <!--                            Last modified: <i t-field="person.write_date" t-options='{"format": "long"}'/>-->
+                            Last modified:
+                            <i t-field="person.write_date" t-options='{"widget": "relative"}'/>
+                            <!--                            Last modified: 11 minutes ago-->
+                        </p>
+                        <div contentEditable="True" t-field="person.biography"/>
+                    </div>
+                </div>
+                <div class="oe_structure"/>
+            </t>
+        </template>
+
+        <template id="product_item_hide_no_price" inherit_id="website_sale.products_item">
+            <xpath expr="//div[hasclass('product_price')]" position="attributes">
+                <attribute name="t-if">product.price &gt; 1000</attribute>
+            </xpath>
+        </template>
+
+
+    </data>
+</odoo>

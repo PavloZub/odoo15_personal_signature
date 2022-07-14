@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="course_item1" model="open_academy.course">
+            <field name="name">EXW</field>
+            <field name="title">EX WORKS</field>
+            <field name="description">description EX WORKS</field>
+        </record>
+        <record id="course_item2" model="open_academy.course">
+            <field name="name">FCA</field>
+            <field name="title">FREE CARRIER</field>
+            <field name="description">description FREE CARRIER</field>
+        </record>
+        <record id="course_item3" model="open_academy.course">
+            <field name="name">FAS</field>
+            <field name="title">FREE ALONGSIDE SHIP</field>
+             <field name="description">description FREE ALONGSIDE SHIP</field>
+        </record>
+        <record id="course_item4" model="open_academy.course">
+            <field name="name">FOB</field>
+            <field name="title">FREE ON BOARD</field>
+            <field name="description">description FREE ON BOARD</field>
+        </record>
+    </data>
+</odoo>
