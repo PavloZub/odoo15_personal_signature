@@ -44,12 +44,12 @@ msgstr "Особистий підпис"
 #. module: hk_personal_signature
 #: model:ir.actions.report,name:hk_personal_signature.hk_invoice_rahf_account_move_report
 msgid "Rahunok Faktura Invoice stamp"
-msgstr "Рахунок фактура invoice з факсимиле"
+msgstr "Рахунок фактура з факсиміле"
 
 #. module: hk_personal_signature
 #: model:ir.actions.report,name:hk_personal_signature.hk_so_rahf_sale_order_report
 msgid "Rahunok Faktura SO"
-msgstr "Рахунок фактура sale з факсимиле"
+msgstr "Рахунок фактура з факсиміле"
 
 #. module: hk_personal_signature
 #: model_terms:ir.ui.view,arch_db:hk_personal_signature.hk_personal_signature_res_company_form_view

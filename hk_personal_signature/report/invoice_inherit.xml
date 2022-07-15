@@ -76,7 +76,7 @@
     <record id="hk_invoice_vydn_account_move_report_" model="ir.actions.report">
         <field name="name">Vydatkova Nakladna Invoice</field>
         <field name="model">account.move</field>
-        <field name="report_type">qweb-html</field>
+        <field name="report_type">qweb-pdf</field>
         <field name="report_name">hk_personal_signature.hk_invoice_vydn_container_inherit</field>
         <field name="report_file">hk_personal_signature.hk_invoice_vydn_container_inherit</field>
         <field name="print_report_name">(object.state in ('draft', 'sent') and 'Vydatkova - %s' % (object.name)) or 'Vydatkova - %s' % (object.name)</field>
@@ -113,8 +113,7 @@
         <field name="paperformat_id" ref="hk_personal_signature.hk_so_vydn_paperformat_a4"/>
     </record>
 
-    <template id="hk_invoice_rahf_container_inherit" inherit_id="kw_invoice_rahf.kw_invoice_rahf_container"
-              primary="True">
+    <template id="hk_invoice_rahf_container_inherit" inherit_id="kw_invoice_rahf.kw_invoice_rahf_container" primary="True">
         <xpath expr="//t/t/t[@t-call='kw_invoice_rahf.kw_invoice_rahf_template']" position="before">
             <t t-set="print_with_stamp" t-value="True"/>
         </xpath>
