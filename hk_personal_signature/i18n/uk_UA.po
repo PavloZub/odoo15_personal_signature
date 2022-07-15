@@ -70,9 +70,9 @@ msgstr "Користувачі"
 #. module: hk_personal_signature
 #: model:ir.actions.report,name:hk_personal_signature.hk_invoice_vydn_account_move_report_
 msgid "Vydatkova Nakladna Invoice"
-msgstr "Видаткова накладна рахунки з факсиміле"
+msgstr "Видаткова накладна з факсиміле"
 
 #. module: hk_personal_signature
 #: model:ir.actions.report,name:hk_personal_signature.hk_so_vydn_sale_order_report
 msgid "Vydatkova Nakladna SO"
-msgstr "Видаткова накладна продажі з факсиміле"
+msgstr "Видаткова накладна з факсиміле"
