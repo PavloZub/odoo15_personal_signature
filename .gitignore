@@ -102,3 +102,9 @@ probe/
 *.orig
 media/
 probe/
+biko_load_comments/*.csv
+biko_load_comments/*.xlsx
+biko_load_comments/*.json
+biko_load_comments/*.txt
+*.yaml
+*.copy
